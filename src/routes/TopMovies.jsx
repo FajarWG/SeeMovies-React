@@ -2,20 +2,19 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import MovieBox from '../MovieBox';
 import Navbar from '../components/Navbar';
+import fetcher from '../utils/fetcher';
 
 const API_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=c6a36b80cc4c15edf75aebb21bb21aa9";
 
 function TopMovies() {
 
     const [movies, setMovies] = useState([]);
-
+    const getData = async () => {
+        const data = await fetcher(API_URL);
+        setMovies(data.results);
+    }
     useEffect(() => {
-        fetch(API_URL)
-            .then((res) => res.json())
-            .then(data => {
-                console.log(data);
-                setMovies(data.results);
-            })
+        getData();
     }, [])
 
     return (

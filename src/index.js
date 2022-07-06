@@ -23,7 +23,6 @@ root.render(
       <Route path="/NowPlaying" element={<NowPlaying />} />
       <Route path="/TopMovies" element={<TopMovies />} />
       <Route path="/Upcoming" element={<Upcoming />} />
-      {/* <Route path="/Search" element={<Search />} /> */}
     </Routes>
   </BrowserRouter>
 );
