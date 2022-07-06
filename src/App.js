@@ -24,6 +24,7 @@ function App() {
     <div>
       {movies.length > 0 ?(
         <div className="container text-center">
+          <div className='text-center fw-bold my-5 fs-2'>Discover</div>
           {movies.map((movieReq)=>
           <MovieBox key={movieReq.id} {...movieReq}/>)}
     </div>
