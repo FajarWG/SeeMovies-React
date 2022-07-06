@@ -1,11 +1,10 @@
 import React,{useState,useEffect} from 'react';
 import './App.css';
 import MovieBox from './MovieBox';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 
 const API_URL="https://api.themoviedb.org/3/discover/movie?api_key=c6a36b80cc4c15edf75aebb21bb21aa9";
-// const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=c6a36b80cc4c15edf75aebb21bb21aa9&query";
+
 function App() {
 
   const [movies, setMovies]=useState([]);
