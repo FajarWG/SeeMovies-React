@@ -11,18 +11,21 @@ import Popular from './routes/Popular'
 import TopMovies from './routes/TopMovies'
 import Upcoming from './routes/Upcoming'
 import NowPlaying from './routes/NowPlaying'
+import Layout from './components/Layout';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/Popular" element={<Popular />} />
-      <Route path="/NowPlaying" element={<NowPlaying />} />
-      <Route path="/TopMovies" element={<TopMovies />} />
-      <Route path="/Upcoming" element={<Upcoming />} />
-    </Routes>
+    <Layout>
+      <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/Popular" element={<Popular />} />
+          <Route path="/NowPlaying" element={<NowPlaying />} />
+          <Route path="/TopMovies" element={<TopMovies />} />
+          <Route path="/Upcoming" element={<Upcoming />} />
+      </Routes>
+    </Layout>
   </BrowserRouter>
 );
