@@ -9,7 +9,7 @@ function Poster({title, poster_path}) {
     return (
         <div>
             <img alt={title} className="poster-img" src={"https://image.tmdb.org/t/p/w500/" + poster_path} />
-            <button className="add-poster" onClick={() => sendToWatchlist}>Add to watchlist</button>
+            {/* <button className="add-poster" onClick={() => sendToWatchlist}>Add to watchlist</button> */}
         </div>
         
     )
