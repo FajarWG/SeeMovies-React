@@ -1,7 +1,7 @@
 import React from 'react';
-import AuthenticatedUser from '../components/AuthenticatedUser';
+// import AuthenticatedUser from '../components/AuthenticatedUser';
 import Slider from '../components/Slider';
-import { UserProvider} from './context/User';
+// import { UserProvider} from './context/User';
 
 const Home = () => {
   
@@ -12,9 +12,9 @@ const Home = () => {
     return (
       <>
       <div className='container'>
-        <UserProvider>
+        {/* <UserProvider>
           <AuthenticatedUser />
-        </UserProvider>
+        </UserProvider> */}
         <div className='text-center fw-bold my-5 fs-2'>Welcome To SeeMovies</div>
         <div className='fw-bold my-2 fs-3'>Now Playing</div>
           <Slider api={api_now} />

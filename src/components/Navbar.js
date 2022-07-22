@@ -10,6 +10,11 @@ const Navbar = () => {
         localStorage.setItem('Total Click', click + 1);
     }
 
+    const resetClick = () => {
+        setClick(0);
+        localStorage.setItem('Total Click', 0);
+    }
+
     return (
         <nav className="navbar navbar-expand-lg bg-transparent m-4 mx-5">
             <div className="container-fluid">
@@ -40,6 +45,9 @@ const Navbar = () => {
                             <Link className="nav-link" to="/login" onClick={() => setTotalClick()}>
                                 <button className="btn btn-dark fw-semibold">Login</button>
                             </Link>
+                        </li>
+                        <li className="nav-item">
+                            <span className="nav-link" onClick={() => resetClick()}>Total Click {click}</span>
                         </li>
                     </ul>
                 </div>

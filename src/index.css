@@ -18,6 +18,14 @@ body {
   border-radius: 15px;
 }
 
+.add-poster{
+  background-color: #acacac;
+  width: 200px;
+  margin: 5px;
+  border-color: #474747;
+  border-radius: 15px;
+}
+
 .search{
   width: 93%;
   height: 50px;
